@@ -1,0 +1,47 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#846496;
+  font-family:'Roboto',sans-serif;
+  overflow: hidden;
+}
+
+/* MAIN APP LAYOUT */
+.body-container{
+  min-height:100vh;
+  display:flex;
+}
+
+/* LEFT SIDEBAR */
+.menu{
+  width:420px;
+  min-height:100vh;
+  background:#EEEAFD;
+  box-shadow: 8px 0 30px rgba(0,0,0,0.15);
+  display:flex;
+  flex-direction:column;
+}
+
+/* RIGHT SIDE VISUALIZER AREA */
+.visualizer{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  position:relative;
+}
+
+.visualizer::before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,#9667E033,transparent);
+  filter:blur(120px);
+  z-index:-1;
+}

@@ -1,0 +1,95 @@
+#my_table{
+  width:95vmin;
+  height:95vmin;
+
+  overflow:hidden;
+
+  background:#EEEAFD;          /* pastel card surface */
+  box-shadow:
+      0 30px 60px rgba(0,0,0,0.25),
+      0 0 0 1px rgba(255,255,255,0.08);
+}
+
+@-webkit-keyframes algo_in
+{
+	from { background-size: calc(0%) calc(0%); }
+	to { background-size: calc(100%) calc(100%); }
+}
+
+@keyframes algo_in
+{
+	from { background-size: calc(0%) calc(0%); }
+	to { background-size: calc(100%) calc(100%); }
+}
+
+.cell
+{
+	background-position: center; 
+	background-repeat: no-repeat;
+	margin: 3px 3px;
+}
+
+.cell_1{
+  background:#EEEAFD;   /* very light lavender */
+}
+
+.cell_2{
+  background:#D8CAFD;   /* soft pastel purple */
+}
+
+.cell_wall{
+  background:#835c97;
+}
+
+.cell_algo
+{
+	background-image: url(../resources/shapes/algo.svg);
+	background-size: calc(100%) calc(100%);
+	-webkit-animation: algo_in 0.3s;
+	animation: algo_in 0.3s;
+}
+
+/* Pastel visited nodes */
+.cell_1.cell_algo,
+.cell_2.cell_algo{
+  background:#C2A9EF;
+}
+
+.cell_1.cell_path
+{
+	background-color: rgb(251, 244, 79);
+}
+
+.cell_2.cell_path
+{
+	background-color: rgb(245, 238, 73);
+}
+
+/* Pastel shortest path
+.cell_1.cell_path,
+.cell_2.cell_path{
+  background:#9667E0;
+} */
+
+.cell_1.visited_cell
+{
+	background-color: rgb(255, 124, 92);
+}
+
+.cell_2.visited_cell
+{
+	background-color: rgb(255, 124, 92);
+}
+
+/* start and target style on grid */
+.start
+{
+	background-image: url(../resources/shapes/start.svg);
+	background-size: calc(100%) calc(100%);
+}
+
+.target
+{
+	background-image: url(../resources/shapes/target.svg);
+	background-size: calc(100%) calc(100%);
+}
