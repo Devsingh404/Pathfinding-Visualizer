@@ -45,3 +45,23 @@ body{
   filter:blur(120px);
   z-index:-1;
 }
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+  .body-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu {
+    width: 100%;
+    max-width: 420px;
+    min-height: auto;
+  }
+  .visualizer {
+    width: 100%;
+    padding: 10px;
+  }
+}
